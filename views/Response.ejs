@@ -1,0 +1,93 @@
+<!-- views/response.ejs -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Submission Received</title>
+</head>
+<style>
+    .submit {
+        border: 1px solid black;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(240, 240, 240);
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(0, 0, 0);
+        box-sizing: border-box;
+        padding: 20px;
+        margin: 0;
+        text-align: center;
+
+    }
+
+    h1 {
+        text-align: center;
+        color: green;
+        font-size: 2em;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    p {
+        text-align: center;
+        font-size: 1.2em;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #333;
+        font-family: 'Courier New', Courier, monospace;
+        line-height: 1.5;
+    }
+
+    button {
+        display: block;
+        margin: auto 0;
+        padding: 10px 20px;
+        font-size: 1em;
+        background-color: #4caf4c;
+        color: white;
+        border: 1px solid black;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button:hover {
+        background-color: #450f45;
+    }
+</style>
+
+<body>
+    <div class="submit">
+        <h1>Thank You!</h1>
+        <p><strong>Name:</strong>
+            <%= name %>
+        </p>
+        <p><strong>Email:</strong>
+            <%= email %>
+        </p>
+
+        <p><strong>Question:</strong>
+            <%= question %>
+        </p>
+        <p><strong>Answer:</strong>
+            <%= answer %>
+        </p>
+        <button onClick="window.history.back()"> Go Back </button>
+    </div>
+</body>
+
+</html>

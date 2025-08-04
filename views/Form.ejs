@@ -1,0 +1,105 @@
+<!-- views/form.ejs -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Submission</title>
+
+</head>
+<style>
+    .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(240, 240, 240);
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(0, 0, 0);
+        box-sizing: border-box;
+        padding: 20px;
+        margin: 0;
+        text-align: center;
+
+
+
+    }
+
+    h1 {
+        color: rgb(4, 7, 0);
+        text-align: center;
+        font-family: cursive;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: unset;
+        background-color: rgb(248, 248, 245);
+
+    }
+
+    form {
+        width: 300px;
+        margin: 20px;
+        padding: 20px;
+        border: 2px solid black;
+        border-radius: 10px;
+        background-color: rgb(185, 182, 182);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    input {
+        margin: auto;
+        width: 80%;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 8px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+        transition: border-color 0.3s ease;
+    }
+
+    button {
+        background-color: rgb(25, 57, 202);
+        color: white;
+        border: 2px solid black;
+        border-radius: 8px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: rgb(7, 241, 109);
+        transform: scale(1.05);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>User Form</h1>
+        <form action="/submit" method="POST">
+            <label>Name: <input type="text" name="name" required /></label><br />
+            <br>
+            <label>Email: <input type="email" name="email" required /></label><br />
+            <br>
+            <label>Question: <input type="text" name="question" required /></label><br />
+            <br>
+            <label>Answer: <input type="text" name="answer" required /></label><br />
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
